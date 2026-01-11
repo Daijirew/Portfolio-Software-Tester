@@ -5,14 +5,14 @@ const Projects = () => {
         {
             title: "E-Commerce Website Testing",
             description: "Conducted comprehensive manual testing for a mock e-commerce platform. Created 50+ test cases covering user registration, product search, and checkout flows.",
-            tags: ["Manual Testing", "Test Cases", "Bug Reports"],
-            link: "#"
+            tags: ["Automate Testing", "Manual Testing", "Test Cases", "Bug Reports"],
+            link: "https://github.com/Daijirew/E-commerce-miniproject"
         },
         {
-            title: "API Testing with Postman",
-            description: "Performed API validation for a RESTful service. Verified status codes, response payloads, and edge cases using Postman collections.",
-            tags: ["API Testing", "Postman", "JSON"],
-            link: "#"
+            title: "Practice Testing Project",
+            description: "A practice project for testing skills. Includes automate testing (Playwright).",
+            tags: ["Automate Testing", "Playwright", "Test Cases"],
+            link: "https://github.com/Daijirew/Test-QA-Practice"
         },
         {
             title: "Bug Tracking Dashboard",
@@ -54,7 +54,7 @@ const Projects = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <a href={project.link} className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
                                     View Details
                                 </a>
                             </div>
