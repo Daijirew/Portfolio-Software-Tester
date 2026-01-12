@@ -27,7 +27,7 @@ const About = () => {
                             }}>
                                 <h3 style={{ color: 'var(--color-primary)', marginBottom: '1rem', fontSize: '1.2rem' }}>🎓 Education</h3>
                                 <p><strong>B.Sc. Computer Science</strong></p>
-                                <p style={{ fontSize: '0.9rem' }}>University of Phayao, 2020-(Expected Graduation: March 2025)</p>
+                                <p style={{ fontSize: '0.9rem' }}>University of Phayao, 2022-(Expected Graduation: March 2026)</p>
                             </div>
 
                             <div style={{
