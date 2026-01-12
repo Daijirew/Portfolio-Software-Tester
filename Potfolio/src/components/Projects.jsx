@@ -9,16 +9,16 @@ const Projects = () => {
             link: "https://github.com/Daijirew/E-commerce-miniproject"
         },
         {
-            title: "Practice Testing Project",
-            description: "A practice project for testing skills. Includes automate testing (Playwright).",
-            tags: ["Automate Testing", "Playwright", "Test Cases"],
-            link: "https://github.com/Daijirew/Test-QA-Practice"
+            title: "Intern Project eZView Backoffice",
+            description: "A intern project for testing skills. Includes automate testing (Playwright).",
+            tags: ["Automate Testing", "Manual Testing", "Playwright", "Test Cases"],
+            link: "https://github.com/Daijirew/Intern-Project-eZView-backoffice?tab=readme-ov-file"
         },
         {
-            title: "Bug Tracking Dashboard",
-            description: "A simulated project demonstrating bug lifecycle management using JIRA. Managed backlog, sprints, and defect triage process.",
-            tags: ["JIRA", "Agile", "Process Management"],
-            link: "#"
+            title: "Practice Testing Project",
+            description: "A practice project for testing skills. Includes automate testing (Playwright).",
+            tags: ["Automate Testing", "Manual Testing", "Playwright", "Test Cases"],
+            link: "https://github.com/Daijirew/Test-QA-Practice"
         }
     ];
 

@@ -65,7 +65,7 @@ const Navbar = () => {
                     <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
                     <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
 
-                    <a href="/resume.pdf" className="btn btn-primary" onClick={() => setIsMenuOpen(false)} download target="_blank" rel="noopener noreferrer">
+                    <a href="/resume.pdf" className="btn btn-primary" onClick={() => setIsMenuOpen(false)} download target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
                         Download Resume
                     </a>
                 </div>
