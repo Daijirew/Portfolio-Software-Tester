@@ -6,14 +6,8 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "E-Commerce Website Testing",
-            description: "Conducted comprehensive manual testing for a mock e-commerce platform. Created 50+ test cases covering user registration, product search, and checkout flows.",
-            tags: ["Automate Testing", "Manual Testing", "Test Cases", "Bug Reports"],
-            link: "https://github.com/Daijirew/E-commerce-miniproject"
-        },
-        {
             title: "Intern Project eZView Backoffice",
-            description: "A intern project for testing skills. Includes automate testing (Playwright).",
+            description: "Developed a scalable E2E automation framework during the internship to validate the eZview Backoffice system. The framework focuses on maintainability and stability for complex logistics workflows.",
             tags: ["Automate Testing", "Manual Testing", "Playwright", "Test Cases"],
             link: "https://github.com/Daijirew/Intern-Project-eZView-backoffice?tab=readme-ov-file"
         },
@@ -30,11 +24,17 @@ const Projects = () => {
             link: "https://github.com/Daijirew/QA-Practice-TypeScript"
         },
         {
-            title: "DinoDex",
-            description: "Dinosaur Codex ",
-            tags: ["Automate Testing", "Manual Testing", "Playwright", "Test Cases"],
-            link: "https://github.com/Daijirew/DinoDex"
-        }
+            title: "E-Commerce Website Testing",
+            description: "Designed and developed a full-stack application to practice advanced testing scenarios. The project serves as a realistic environment to implement comprehensive quality assurance strategies.",
+            tags: ["Full Stack", "React", "Golang", "PostgreSQL", "Supabase", "REST API"],
+            link: "https://github.com/Daijirew/E-commerce-miniproject"
+        },
+        {
+            title: "Cat Sitter Application",
+            description: "Designed and developed a full-stack mobile application connecting cat owners with sitters. The system supports 3 user roles (Owner, Sitter, Admin) and integrates critical 3rd-party services.",
+            tags: ["Mobile App", "Flutter", "Firebase", "Manual Testing", "Google Maps API"],
+            link: "https://github.com/Daijirew/ProjectCs"
+        },
     ];
 
     const maxIndex = Math.max(0, projects.length - visibleCount);
