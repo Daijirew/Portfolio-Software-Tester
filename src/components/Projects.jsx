@@ -173,14 +173,22 @@ const Projects = () => {
                                     boxShadow: 'var(--shadow-md)',
                                     transition: 'transform 0.3s ease',
                                     border: '1px solid #f0f0f0',
-                                    animation: 'fadeIn 0.5s ease-in-out'
+                                    animation: 'fadeIn 0.5s ease-in-out',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    height: '100%'
                                 }}>
-                                    <div style={{ padding: '2rem' }}>
+                                    <div style={{
+                                        padding: '2rem',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: '100%'
+                                    }}>
                                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{project.title}</h3>
-                                        <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem', minHeight: '80px' }}>
+                                        <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
                                             {project.description}
                                         </p>
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                                             {project.tags.map((tag, i) => (
                                                 <span key={i} style={{
                                                     fontSize: '0.8rem',
@@ -193,9 +201,11 @@ const Projects = () => {
                                                 </span>
                                             ))}
                                         </div>
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
-                                            View Details
-                                        </a>
+                                        <div style={{ marginTop: 'auto' }}>
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ width: '100%', textAlign: 'center' }}>
+                                                View Details
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
