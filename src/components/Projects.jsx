@@ -51,8 +51,8 @@ const Projects = () => {
             ),
             description: 'To see the test cases, click on the links below.',
             items: [
-                { name: 'Test Cases Version Thai', link: '/Test Cases (TH).pdf' },
-                { name: 'Test Cases Version English', link: '/Test Cases (EN).pdf' },
+                { name: 'Test Cases Version Thai', link: '/Test Case (TH).pdf' },
+                { name: 'Test Cases Version English', link: '/Test Case (EN).pdf' },
             ]
         }
     ];
