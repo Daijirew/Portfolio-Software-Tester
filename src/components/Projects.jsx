@@ -21,11 +21,8 @@ const Projects = () => {
             ),
             description: 'These are some of the applications I have tested.',
             items: [
-                { name: 'Random Date Generator', link: '#' },
-                { name: 'Gear Generator', link: '#' },
-                { name: 'XE Currency Convertor', link: '#' },
-                { name: 'Tricentis Vehicle Insurance', link: '#' },
-                { name: 'Online Gantt', link: '#' },
+                { name: 'Test Report Version Thai', link: '/Test Report (TH).pdf' },
+                { name: 'Test Report Version English', link: '/Test Report (EN).pdf' },
             ]
         },
         {
@@ -40,7 +37,7 @@ const Projects = () => {
             ),
             description: 'Bug reports I have documented during testing.',
             items: [
-                { name: 'Intern Project eZView Backoffice Report', link: '/Bug Reports.pdf', download: true },
+                { name: 'Intern Project eZView Backoffice Report', link: '/Bug Reports.pdf' },
             ]
         },
         {
