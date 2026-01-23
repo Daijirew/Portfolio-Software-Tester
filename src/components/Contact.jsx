@@ -17,7 +17,7 @@ const Contact = () => {
                     marginBottom: '3rem'
                 }}>
                     <a href="mailto:daijirew123@gmail.com" className="btn btn-primary" style={{ padding: '1rem 3rem' }}>
-                        Say Hello
+                        Send Email
                     </a>
                 </div>
 
