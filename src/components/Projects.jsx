@@ -120,6 +120,7 @@ const Projects = () => {
                     {maxIndex > 0 && (
                         <>
                             <button
+                                className="slider-arrow-left"
                                 onClick={prevSlide}
                                 disabled={currentIndex === 0}
                                 style={{
@@ -165,6 +166,7 @@ const Projects = () => {
                             </button>
 
                             <button
+                                className="slider-arrow-right"
                                 onClick={nextSlide}
                                 disabled={currentIndex === maxIndex}
                                 style={{
