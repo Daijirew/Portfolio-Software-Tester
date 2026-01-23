@@ -2,7 +2,65 @@ import React, { useState } from 'react';
 
 const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedCategory, setSelectedCategory] = useState(null);
     const visibleCount = 3; // Show 3 projects at a time
+
+    // Curated Work Categories
+    const workCategories = [
+        {
+            id: 'test-reports',
+            title: 'Test Reports',
+            icon: (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+            ),
+            description: 'These are some of the applications I have tested.',
+            items: [
+                { name: 'Random Date Generator', link: '#' },
+                { name: 'Gear Generator', link: '#' },
+                { name: 'XE Currency Convertor', link: '#' },
+                { name: 'Tricentis Vehicle Insurance', link: '#' },
+                { name: 'Online Gantt', link: '#' },
+            ]
+        },
+        {
+            id: 'bug-reports',
+            title: 'Bug Reports',
+            icon: (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+            ),
+            description: 'Bug reports I have documented during testing.',
+            items: [
+                { name: 'Intern Project eZView Backoffice Report', link: '/Bug Reports.pdf', download: true },
+            ]
+        },
+        {
+            id: 'test-cases',
+            title: 'Test Cases',
+            icon: (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+            ),
+            description: 'Test cases I have designed and documented.',
+            items: [
+                { name: 'Login Feature Test Cases', link: '#' },
+                { name: 'Payment Flow Test Cases', link: '#' },
+                { name: 'User Registration Test Cases', link: '#' },
+                { name: 'Search Functionality Test Cases', link: '#' },
+            ]
+        }
+    ];
 
     const projects = [
         {
@@ -239,6 +297,203 @@ const Projects = () => {
                         </div>
                     )}
                 </div>
+
+                {/* Curated Work Section */}
+                <div style={{ marginTop: '5rem' }}>
+                    <h2 className="section-title">
+                        Example of Reports
+                    </h2>
+
+                    {/* Work Categories Grid */}
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                        gap: '2rem',
+                        maxWidth: '900px',
+                        margin: '0 auto'
+                    }}>
+                        {workCategories.map((category) => (
+                            <button
+                                key={category.id}
+                                onClick={() => setSelectedCategory(category)}
+                                style={{
+                                    padding: '2rem',
+                                    backgroundColor: '#F9FAFB',
+                                    borderRadius: '20px',
+                                    border: '3px solid #3B82F6',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    gap: '1rem',
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(-5px)';
+                                    e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.25)';
+                                    e.currentTarget.style.backgroundColor = '#EFF6FF';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                                    e.currentTarget.style.backgroundColor = '#F9FAFB';
+                                }}
+                            >
+                                <div style={{
+                                    width: '120px',
+                                    height: '120px',
+                                    backgroundColor: 'white',
+                                    borderRadius: '15px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                                }}>
+                                    {category.icon}
+                                </div>
+                                <span style={{
+                                    fontSize: '1.25rem',
+                                    fontWeight: '600',
+                                    color: '#1F2937'
+                                }}>
+                                    {category.title}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Modal */}
+                {selectedCategory && (
+                    <div
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            zIndex: 1000,
+                            animation: 'fadeIn 0.3s ease'
+                        }}
+                        onClick={() => setSelectedCategory(null)}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: '#EFF6FF',
+                                borderRadius: '20px',
+                                padding: '3rem',
+                                maxWidth: '600px',
+                                width: '90%',
+                                maxHeight: '80vh',
+                                overflow: 'auto',
+                                position: 'relative',
+                                animation: 'slideUp 0.3s ease'
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setSelectedCategory(null)}
+                                style={{
+                                    position: 'absolute',
+                                    top: '1rem',
+                                    right: '1rem',
+                                    width: '36px',
+                                    height: '36px',
+                                    borderRadius: '50%',
+                                    border: 'none',
+                                    backgroundColor: '#E5E7EB',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    transition: 'all 0.2s ease'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#D1D5DB';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#E5E7EB';
+                                }}
+                            >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+
+                            {/* Modal Title */}
+                            <h3 style={{
+                                fontSize: '2rem',
+                                fontWeight: '700',
+                                color: '#1F2937',
+                                textAlign: 'center',
+                                marginBottom: '2rem',
+                                fontStyle: 'italic'
+                            }}>
+                                {selectedCategory.title}
+                            </h3>
+
+                            {/* Description */}
+                            <p style={{
+                                color: '#4B5563',
+                                marginBottom: '1.5rem',
+                                fontSize: '1rem'
+                            }}>
+                                {selectedCategory.description}
+                            </p>
+
+                            {/* Links List */}
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.75rem'
+                            }}>
+                                {selectedCategory.items.map((item, index) => (
+                                    <a
+                                        key={index}
+                                        href={item.link}
+                                        download={item.download ? true : undefined}
+                                        target={item.download ? undefined : "_blank"}
+                                        rel={item.download ? undefined : "noopener noreferrer"}
+                                        style={{
+                                            color: '#3B82F6',
+                                            textDecoration: 'none',
+                                            fontSize: '1rem',
+                                            padding: '0.5rem 0',
+                                            transition: 'all 0.2s ease',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.color = '#1D4ED8';
+                                            e.currentTarget.style.textDecoration = 'underline';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.color = '#3B82F6';
+                                            e.currentTarget.style.textDecoration = 'none';
+                                        }}
+                                    >
+                                        {item.download && (
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                                <polyline points="7 10 12 15 17 10"></polyline>
+                                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                                            </svg>
+                                        )}
+                                        {item.name}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </section>
     );
