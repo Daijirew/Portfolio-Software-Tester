@@ -19,7 +19,7 @@ const Projects = () => {
                     <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
             ),
-            description: 'These are some of the applications I have tested.',
+            description: 'To see the test reports, click on the links below.',
             items: [
                 { name: 'Test Report Version Thai', link: '/Test Report (TH).pdf' },
                 { name: 'Test Report Version English', link: '/Test Report (EN).pdf' },
@@ -35,7 +35,7 @@ const Projects = () => {
                     <line x1="9" y1="21" x2="9" y2="9"></line>
                 </svg>
             ),
-            description: 'Bug reports I have documented during testing.',
+            description: 'To see the bug reports, click on the link below.',
             items: [
                 { name: 'Intern Project eZView Backoffice Report', link: '/Bug Reports.pdf' },
             ]
@@ -49,12 +49,10 @@ const Projects = () => {
                     <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                 </svg>
             ),
-            description: 'Test cases I have designed and documented.',
+            description: 'To see the test cases, click on the links below.',
             items: [
-                { name: 'Login Feature Test Cases', link: '#' },
-                { name: 'Payment Flow Test Cases', link: '#' },
-                { name: 'User Registration Test Cases', link: '#' },
-                { name: 'Search Functionality Test Cases', link: '#' },
+                { name: 'Test Cases Version Thai', link: '/Test Cases (TH).pdf' },
+                { name: 'Test Cases Version English', link: '/Test Cases (EN).pdf' },
             ]
         }
     ];
